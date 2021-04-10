@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@atomikui/core';
+import Link from '@atomikui-core/link';
 
 const App = () => (
   <div className="App">
