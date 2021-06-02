@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import { shallow, configure } from 'enzyme';
 import App from './App';
+import { homeInitialState } from './reducers/home.reducer';
 
 configure({ adapter: new Adapter() });
 
@@ -13,16 +14,7 @@ describe('<App />', () => {
   let app;
 
   beforeEach(() => {
-    const store = mockStore({
-      title: 'Welcome!',
-      subtitle: 'Your project starts here.',
-      description:
-        'With support for Redux, Jest, Enzyme, ESLint, Stylelint, Prettier, React Axe, and Travis CI.',
-      links: [
-        { url: 'https://parceljs.org/', text: 'Parcel' },
-        { url: 'https://www.atomikui.com/', text: 'Atomik UI' },
-      ],
-    });
+    const store = mockStore(homeInitialState);
 
     app = shallow(
       <Provider store={store}>

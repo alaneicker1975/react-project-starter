@@ -1,4 +1,4 @@
-const initialState = {
+export const homeInitialState = {
   title: 'Welcome!',
   subtitle: 'Your project starts here.',
   description:
@@ -9,4 +9,4 @@ const initialState = {
   ],
 };
 
-export default (state = initialState, action) => state;
+export default (state = homeInitialState, action) => state;
